@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class Pistol : MonoBehaviour
 {
+    public GameObject bulletHole;
     public Sprite idlePistol;
     public Sprite shotPistol;
     public float pistolDamage;
@@ -37,9 +38,9 @@ public class Pistol : MonoBehaviour
     {
         ammoText.text = ammoClipLeft + " / " + ammoLeft;
 
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && isReloading == false)
             isShot = true;
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.R) && isReloading == false)
         {
             Reload();
         }
@@ -60,6 +61,7 @@ public class Pistol : MonoBehaviour
             {
                 Debug.Log("Wszedlem w kolizje z " + hit.collider.gameObject.name);
                 hit.collider.gameObject.SendMessage("pistolHit", pistolDamage, SendMessageOptions.DontRequireReceiver);
+                Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
             }
         } else if (isShot == true && ammoClipLeft <= 0 && isReloading == false)
         {

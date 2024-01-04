@@ -917,6 +917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6f89180972c4ca0bec801bf7ec8ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletHole: {fileID: 5716347441120425775, guid: b8928f651a92d4b3d9aa0c2cece30a83, type: 3}
   idlePistol: {fileID: 21300000, guid: 8c75f20f6e9674df6953e5d19ace27c0, type: 3}
   shotPistol: {fileID: 21300000, guid: 2769df293b3674a8ca1a3802e2888c4e, type: 3}
   pistolDamage: 0
