@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 273661735}
   - component: {fileID: 273661734}
   - component: {fileID: 273661733}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 468368464}
+  m_Camera: {fileID: 862884365}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 615129237}
   - component: {fileID: 615129239}
   - component: {fileID: 615129238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 1090298914}
   - component: {fileID: 1090298916}
   - component: {fileID: 1090298915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 1402625784}
   - component: {fileID: 1402625786}
   - component: {fileID: 1402625785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1436035661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 1698365412}
   - component: {fileID: 1698365414}
   - component: {fileID: 1698365413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 1781812067}
   - component: {fileID: 1781812069}
   - component: {fileID: 1781812068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}

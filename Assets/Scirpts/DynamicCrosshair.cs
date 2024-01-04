@@ -36,7 +36,7 @@ public class DynamicCrosshair : MonoBehaviour
             bottomPart.GetComponent<RectTransform>().localPosition = new Vector3(0, -(initialPosition + spread), 0);
             leftPart.GetComponent<RectTransform>().localPosition = new Vector3(-(initialPosition + spread), 0, 0);
             rightPart.GetComponent<RectTransform>().localPosition = new Vector3(initialPosition + spread, 0, 0);
-            spread -= 2;
+            spread -= 1;
         }
 
     }
