@@ -48,6 +48,22 @@ public class PlayerMovement : MonoBehaviour
                 forwardMovement = Input.GetAxis("Vertical") * PlayerRunningSpeed;
                 sidewaysMovement = Input.GetAxis("Horizontal") * PlayerRunningSpeed;
             }
+
+            if(Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+            {
+                if(Input.GetKey(KeyCode.LeftShift))
+                {
+                    DynamicCrosshair.spread = DynamicCrosshair.run_spread;
+                } else
+                {
+                    DynamicCrosshair.spread = DynamicCrosshair.walk_spread;
+                }
+            }
+
+
+        } else
+        {
+            DynamicCrosshair.spread = DynamicCrosshair.jump_spread;
         }
 
         VerticalVelosity += Physics.gravity.y * Time.deltaTime;

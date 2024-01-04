@@ -49,11 +49,12 @@ public class Pistol : MonoBehaviour
 
     void FixedUpdate()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2, 0));
         RaycastHit hit;
         if(isShot == true && ammoClipLeft > 0 && isReloading == false)
         {
             isShot = false;
+            DynamicCrosshair.spread += DynamicCrosshair.pistol_shooting_spread;
             ammoClipLeft--;
             source.PlayOneShot(shotSound);
             StartCoroutine("shot");
