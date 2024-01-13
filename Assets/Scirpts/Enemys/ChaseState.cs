@@ -14,7 +14,7 @@ public class ChaseState : IEnemyAI
 
     }
 
-    public void OnTriggerEnter(Collision enemy)
+    public void OnTriggerEnter(Collider enemy)
     {
 
     }

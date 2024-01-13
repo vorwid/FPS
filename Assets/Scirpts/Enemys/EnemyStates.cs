@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyStates : MonoBehaviour
 {
+    public Transform[] waypoints;
+    public int patrolRange;
+
     [HideInInspector]
     public AlertState alertState;
     [HideInInspector]
@@ -14,6 +19,10 @@ public class EnemyStates : MonoBehaviour
     public PatrolState patrolState;
     [HideInInspector]
     public IEnemyAI currentState;
+    [HideInInspector]
+    public NavMeshAgent navMeshAgent;
+    [HideInInspector]
+    public Transform chaseTargert;
 
     void Awake()
     {
@@ -21,7 +30,7 @@ public class EnemyStates : MonoBehaviour
         attackState = new AttackState(this);
         chaseState = new ChaseState(this);
         patrolState = new PatrolState(this);
-
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     
@@ -37,7 +46,7 @@ public class EnemyStates : MonoBehaviour
         currentState.UpdateAction();  
     }
 
-    void OnTriggerEnter(Collision otherObj)
+    void OnTriggerEnter(Collider otherObj)
     {
         currentState.OnTriggerEnter(otherObj);
     }

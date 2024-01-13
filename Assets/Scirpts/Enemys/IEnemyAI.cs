@@ -6,7 +6,7 @@ public interface IEnemyAI
 {
     void UpdateAction();
 
-    void OnTriggerEnter(Collision enemy);
+    void OnTriggerEnter(Collider enemy);
 
     void ToPatrolState();
     void ToAttackState();

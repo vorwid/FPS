@@ -15,7 +15,7 @@ public class AttackState : IEnemyAI
 
     }
 
-    public void OnTriggerEnter(Collision enemy)
+    public void OnTriggerEnter(Collider enemy)
     {
 
     }
